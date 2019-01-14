@@ -81,7 +81,7 @@
             this.closeOthersToTheRightToolStripMenuItem,
             this.closeAllToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(262, 430);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(262, 408);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // newSessionToolStripMenuItem
@@ -239,9 +239,9 @@
             // 
             // ctlPuttyPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1339, 203);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(279, 253);
             this.Name = "ctlPuttyPanel";
             this.TabPageContextMenuStrip = this.contextMenuStrip1;
             this.Text = "PuTTY Session";

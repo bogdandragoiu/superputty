@@ -20,6 +20,7 @@ namespace SuperPutty.Utils
             this.MainForm = form;
             this.MainForm.ResizeEnd += HandleResizeEnd;
 
+            //foreach (IDockContent doc in this.MainForm.DockPanel.Contents)
             foreach (IDockContent doc in this.MainForm.DockPanel.Contents)
             {
                 ctlPuttyPanel pp = doc as ctlPuttyPanel;

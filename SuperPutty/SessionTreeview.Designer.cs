@@ -43,6 +43,8 @@
             this.connectInNewSuperPuTTYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.fileBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.winSCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileZillaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripFolder = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newSessionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,32 +58,32 @@
             this.expandAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerDelayedSave = new System.Windows.Forms.Timer(this.components);
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.winSCPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileZillaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSearch = new System.Windows.Forms.ToolStripButton();
+            this.btnClear = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.txtSearch = new ToolStripSpringTextBox();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.contextMenuStripAddTreeItem.SuspendLayout();
             this.contextMenuStripFolder.SuspendLayout();
-            this.panelSearch.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
             // 
             this.treeView1.AllowDrop = true;
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.imageList1;
-            this.treeView1.Location = new System.Drawing.Point(0, 25);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(5);
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
             this.treeView1.ShowLines = false;
             this.treeView1.ShowNodeToolTips = true;
             this.treeView1.ShowRootLines = false;
-            this.treeView1.Size = new System.Drawing.Size(430, 478);
+            this.treeView1.Size = new System.Drawing.Size(312, 226);
             this.treeView1.TabIndex = 0;
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -115,7 +117,7 @@
             this.fileZillaToolStripMenuItem});
             this.contextMenuStripAddTreeItem.Name = "contextMenuStripAddTreeItem";
             this.contextMenuStripAddTreeItem.ShowImageMargin = false;
-            this.contextMenuStripAddTreeItem.Size = new System.Drawing.Size(182, 258);
+            this.contextMenuStripAddTreeItem.Size = new System.Drawing.Size(182, 236);
             this.contextMenuStripAddTreeItem.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripAddTreeItem_Opening);
             // 
             // newSessionToolStripMenuItem
@@ -183,6 +185,20 @@
             this.fileBrowserToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.fileBrowserToolStripMenuItem.Text = "File Transfer";
             this.fileBrowserToolStripMenuItem.Click += new System.EventHandler(this.fileBrowserToolStripMenuItem_Click);
+            // 
+            // winSCPToolStripMenuItem
+            // 
+            this.winSCPToolStripMenuItem.Name = "winSCPToolStripMenuItem";
+            this.winSCPToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.winSCPToolStripMenuItem.Text = "WinSCP";
+            this.winSCPToolStripMenuItem.Click += new System.EventHandler(this.winSCPToolStripMenuItem_Click);
+            // 
+            // fileZillaToolStripMenuItem
+            // 
+            this.fileZillaToolStripMenuItem.Name = "fileZillaToolStripMenuItem";
+            this.fileZillaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.fileZillaToolStripMenuItem.Text = "FileZilla";
+            this.fileZillaToolStripMenuItem.Click += new System.EventHandler(this.fileZillaToolStripMenuItem_Click);
             // 
             // contextMenuStripFolder
             // 
@@ -277,81 +293,72 @@
             this.timerDelayedSave.Interval = 3000;
             this.timerDelayedSave.Tick += new System.EventHandler(this.timerDelayedSave_Tick);
             // 
-            // panelSearch
-            // 
-            this.panelSearch.Controls.Add(this.txtSearch);
-            this.panelSearch.Controls.Add(this.btnSearch);
-            this.panelSearch.Controls.Add(this.btnClear);
-            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearch.Location = new System.Drawing.Point(0, 0);
-            this.panelSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Padding = new System.Windows.Forms.Padding(0, 2, 1, 2);
-            this.panelSearch.Size = new System.Drawing.Size(430, 25);
-            this.panelSearch.TabIndex = 2;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(0, 3);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(384, 19);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
-            // 
             // btnSearch
             // 
-            this.btnSearch.AutoSize = true;
-            this.btnSearch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnSearch.Image = global::SuperPutty.Properties.Resources.find;
-            this.btnSearch.Location = new System.Drawing.Point(385, 2);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(22, 21);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Size = new System.Drawing.Size(23, 22);
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnClear
             // 
-            this.btnClear.AutoSize = true;
-            this.btnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnClear.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClear.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnClear.Image = global::SuperPutty.Properties.Resources.cross_black;
-            this.btnClear.Location = new System.Drawing.Point(407, 2);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(0);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(22, 21);
-            this.btnClear.TabIndex = 2;
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Size = new System.Drawing.Size(23, 22);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // winSCPToolStripMenuItem
+            // toolStrip1
             // 
-            this.winSCPToolStripMenuItem.Name = "winSCPToolStripMenuItem";
-            this.winSCPToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.winSCPToolStripMenuItem.Text = "WinSCP";
-            this.winSCPToolStripMenuItem.Click += new System.EventHandler(this.winSCPToolStripMenuItem_Click);
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtSearch,
+            this.btnClear,
+            this.btnSearch});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(312, 25);
+            this.toolStrip1.Stretch = true;
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // fileZillaToolStripMenuItem
+            // txtSearch
             // 
-            this.fileZillaToolStripMenuItem.Name = "fileZillaToolStripMenuItem";
-            this.fileZillaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.fileZillaToolStripMenuItem.Text = "FileZilla";
-            this.fileZillaToolStripMenuItem.Click += new System.EventHandler(this.fileZillaToolStripMenuItem_Click);
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(1);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(232, 23);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.treeView1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(312, 226);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Padding = new System.Windows.Forms.Padding(1);
+            this.toolStripContainer1.Size = new System.Drawing.Size(314, 253);
+            this.toolStripContainer1.TabIndex = 5;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // SessionTreeview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 503);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.panelSearch);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(314, 253);
+            this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SessionTreeview";
@@ -360,8 +367,13 @@
             this.Text = "PuTTY Sessions";
             this.contextMenuStripAddTreeItem.ResumeLayout(false);
             this.contextMenuStripFolder.ResumeLayout(false);
-            this.panelSearch.ResumeLayout(false);
-            this.panelSearch.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,11 +406,12 @@
         private System.Windows.Forms.ToolStripMenuItem connectInNewSuperPuTTYToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem connectAllToolStripMenuItem;
-        private System.Windows.Forms.Panel panelSearch;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ToolStripButton btnSearch;
+        private System.Windows.Forms.ToolStripButton btnClear;
         private System.Windows.Forms.ToolStripMenuItem winSCPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileZillaToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private ToolStripSpringTextBox txtSearch;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
     }
 }

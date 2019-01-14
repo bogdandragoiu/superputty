@@ -128,7 +128,7 @@ namespace SuperPutty
         {
             this.treeView1.ShowLines = SuperPuTTY.Settings.SessionsTreeShowLines;
             this.treeView1.Font = SuperPuTTY.Settings.SessionsTreeFont;
-            this.panelSearch.Visible = SuperPuTTY.Settings.SessionsShowSearch;
+            //this.panelSearch.Visible = SuperPuTTY.Settings.SessionsShowSearch;
             this.ResortNodes();
         }
 
@@ -1027,6 +1027,7 @@ namespace SuperPutty
             }
         }
 
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             this.ApplySearch(this.txtSearch.Text);
@@ -1150,6 +1151,11 @@ namespace SuperPutty
             {
                 this.ApplySearch(this.txtSearch.Text);
             }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 

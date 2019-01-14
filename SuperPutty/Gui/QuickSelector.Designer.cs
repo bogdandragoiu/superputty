@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxData = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.itemDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -100,8 +100,8 @@
             // detailDataGridViewTextBoxColumn
             // 
             this.detailDataGridViewTextBoxColumn.DataPropertyName = "Detail";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.detailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.detailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.detailDataGridViewTextBoxColumn.FillWeight = 70F;
             this.detailDataGridViewTextBoxColumn.HeaderText = "Detail";
             this.detailDataGridViewTextBoxColumn.Name = "detailDataGridViewTextBoxColumn";
@@ -127,14 +127,14 @@
             // 
             // QuickSelector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(334, 244);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.textBoxData);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuickSelector";
-            this.Opacity = 1.0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QuickSelector";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();

@@ -29,34 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBoxLayouts = new System.Windows.Forms.ListBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadInNewInstanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.setAsDefaultLayoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.setAsDefaultLayoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxLayouts = new System.Windows.Forms.ListBox();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listBoxLayouts
-            // 
-            this.listBoxLayouts.ContextMenuStrip = this.contextMenuStrip;
-            this.listBoxLayouts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxLayouts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxLayouts.FormattingEnabled = true;
-            this.listBoxLayouts.IntegralHeight = false;
-            this.listBoxLayouts.ItemHeight = 15;
-            this.listBoxLayouts.Location = new System.Drawing.Point(0, 0);
-            this.listBoxLayouts.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.listBoxLayouts.Name = "listBoxLayouts";
-            this.listBoxLayouts.Size = new System.Drawing.Size(235, 287);
-            this.listBoxLayouts.Sorted = true;
-            this.listBoxLayouts.TabIndex = 0;
-            this.listBoxLayouts.DoubleClick += new System.EventHandler(this.listBoxLayouts_DoubleClick);
-            this.listBoxLayouts.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxLayouts_MouseDown);
             // 
             // contextMenuStrip
             // 
@@ -69,7 +52,7 @@
             this.toolStripMenuItem2,
             this.setAsDefaultLayoutToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(188, 148);
+            this.contextMenuStrip.Size = new System.Drawing.Size(188, 126);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // loadToolStripMenuItem
@@ -91,18 +74,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 6);
             // 
-            // setAsDefaultLayoutToolStripMenuItem
-            // 
-            this.setAsDefaultLayoutToolStripMenuItem.Name = "setAsDefaultLayoutToolStripMenuItem";
-            this.setAsDefaultLayoutToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.setAsDefaultLayoutToolStripMenuItem.Text = "Set as Default Layout";
-            this.setAsDefaultLayoutToolStripMenuItem.Click += new System.EventHandler(this.setAsDefaultLayoutToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(184, 6);
-            // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
@@ -117,13 +88,43 @@
             this.renameToolStripMenuItem.Text = "Rename";
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(184, 6);
+            // 
+            // setAsDefaultLayoutToolStripMenuItem
+            // 
+            this.setAsDefaultLayoutToolStripMenuItem.Name = "setAsDefaultLayoutToolStripMenuItem";
+            this.setAsDefaultLayoutToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.setAsDefaultLayoutToolStripMenuItem.Text = "Set as Default Layout";
+            this.setAsDefaultLayoutToolStripMenuItem.Click += new System.EventHandler(this.setAsDefaultLayoutToolStripMenuItem_Click);
+            // 
+            // listBoxLayouts
+            // 
+            this.listBoxLayouts.ContextMenuStrip = this.contextMenuStrip;
+            this.listBoxLayouts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxLayouts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxLayouts.FormattingEnabled = true;
+            this.listBoxLayouts.IntegralHeight = false;
+            this.listBoxLayouts.ItemHeight = 15;
+            this.listBoxLayouts.Location = new System.Drawing.Point(1, 0);
+            this.listBoxLayouts.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.listBoxLayouts.Name = "listBoxLayouts";
+            this.listBoxLayouts.Size = new System.Drawing.Size(234, 287);
+            this.listBoxLayouts.Sorted = true;
+            this.listBoxLayouts.TabIndex = 0;
+            this.listBoxLayouts.DoubleClick += new System.EventHandler(this.listBoxLayouts_DoubleClick);
+            this.listBoxLayouts.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxLayouts_MouseDown);
+            // 
             // LayoutsList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(235, 287);
             this.Controls.Add(this.listBoxLayouts);
             this.Name = "LayoutsList";
+            this.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.Text = "Layouts";
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -33,23 +33,22 @@
             // 
             // sessionDetailPropertyGrid
             // 
-            this.sessionDetailPropertyGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.sessionDetailPropertyGrid.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.sessionDetailPropertyGrid.Location = new System.Drawing.Point(0, 1);
+            this.sessionDetailPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sessionDetailPropertyGrid.Location = new System.Drawing.Point(1, 0);
             this.sessionDetailPropertyGrid.Name = "sessionDetailPropertyGrid";
-            this.sessionDetailPropertyGrid.Size = new System.Drawing.Size(290, 247);
+            this.sessionDetailPropertyGrid.Size = new System.Drawing.Size(288, 249);
             this.sessionDetailPropertyGrid.TabIndex = 0;
             this.sessionDetailPropertyGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.sessionDetailPropertyGrid_PropertyValueChanged);
             // 
             // SessionDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(289, 249);
             this.Controls.Add(this.sessionDetailPropertyGrid);
             this.Name = "SessionDetail";
+            this.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.Text = "Session Detail";
             this.ResumeLayout(false);
 
